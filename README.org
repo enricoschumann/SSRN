@@ -18,7 +18,7 @@ the package directly from within R:
 
 * Usage
 
-#+BEGIN_SRC R :colnames yes :results output :session *R* :export both
+#+BEGIN_SRC R :colnames yes :results output :session *R* :exports both
   library("SSRN")
   tmp <- SSRN_stats(895233)
   tmp[["downloads"]]
@@ -56,7 +56,7 @@ the package directly from within R:
 
 ... or in Org format.
 
-#+BEGIN_SRC R :colnames yes :results output :session *R* :export both
+#+BEGIN_SRC R :colnames yes :results output :session *R* :exports both
   require("orgutils")   ##   install.packages('orgutils', type = 'source',
 			##                    repos = c('http://enricoschumann.net/R', getOption('repos')))
   toOrg(tmp[["downloads"]])
