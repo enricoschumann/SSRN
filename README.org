@@ -1,0 +1,94 @@
+#+TITLE: Download an author's download statistics from SSRN
+#+AUTHOR: Enrico Schumann
+
+
+
+
+* Installation
+
+The latest version of the package is available from
+[[http://enricoschumann.net/R/packages/SSRN/index.htm]]. You can install
+the package directly from within R:
+#+BEGIN_SRC R :eval never
+  install.packages('SSRN', type = 'source',
+                   repos = c('http://enricoschumann.net/R', 
+                             getOption('repos')))
+#+END_SRC
+
+
+
+* Usage
+
+#+BEGIN_SRC R :colnames yes :results output :session *R*
+  library("SSRN")
+  tmp <- SSRN_stats(895233)
+  tmp[["downloads"]]
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+        Id                                                                  Title Downloads
+1  1289269                Constructing Long/Short Portfolios with the Omega Ratio      1333
+2  1566975                      Calibrating Option Pricing Models with Heuristics      1310
+3  1341181                                            Implementing Binomial Trees       957
+4  1365167      An Empirical Analysis of Alternative Portfolio Selection Criteria       897
+5  1676747                           Calibrating the Nelson-Siegel-Svensson Model       771
+6  1277114                          Heuristic Optimisation in Financial Modelling       693
+7  1601708            Replicating Hedge Fund Indices with Optimization Heuristics       331
+8  1623735            Replicating Hedge Fund Indices with Optimization Heuristics       326
+9  1156355                        Distributed Optimisation of a Portfolio's Omega       562
+10 1464798                    Constructing 130/30-Portfolios with the Omega Ratio       543
+11 1885044                                         FX Trading: An Empirical Study       423
+12 1547173                                  Optimisation in Financial Engineering       368
+13 2171774                                         Better Portfolios with Options       366
+14 1420058                                                        Optimal Enough?       196
+15 1681917                           Creating Rank-Correlated Triangular Variates       189
+16 1433291                         Robust Regression with Optimisation Heuristics       169
+17 1620083             A Note on ‘Good Starting Values’ in Numerical Optimisation       158
+18 1886522                           Examples and Extensions for the NMOF Package       154
+19 1694442 Risk-Reward Optimisation for Long-Run Investors: An Empirical Analysis       128
+20 2214376                                   Take-the-Best in Portfolio Selection       107
+21 2425313                                                  Optimization Cultures       103
+22 2551745                                     Heuristics for Portfolio Selection       102
+23 1480183                                         Appendix for 'Optimal Enough?'        49
+24 2698114                                      Accuracy and Precision in Finance        33
+#+end_example
+
+
+... or in Org format.
+
+#+BEGIN_SRC R :colnames yes :results output :session *R*
+  require("orgutils")   ##   install.packages('orgutils', type = 'source',
+			##                    repos = c('http://enricoschumann.net/R', getOption('repos')))
+  toOrg(tmp[["downloads"]])
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+|      Id | Title                                                                  | Downloads |
+|---------+------------------------------------------------------------------------+-----------|
+| 1289269 | Constructing Long/Short Portfolios with the Omega Ratio                |      1333 |
+| 1566975 | Calibrating Option Pricing Models with Heuristics                      |      1310 |
+| 1341181 | Implementing Binomial Trees                                            |       957 |
+| 1365167 | An Empirical Analysis of Alternative Portfolio Selection Criteria      |       897 |
+| 1676747 | Calibrating the Nelson-Siegel-Svensson Model                           |       771 |
+| 1277114 | Heuristic Optimisation in Financial Modelling                          |       693 |
+| 1601708 | Replicating Hedge Fund Indices with Optimization Heuristics            |       331 |
+| 1623735 | Replicating Hedge Fund Indices with Optimization Heuristics            |       326 |
+| 1156355 | Distributed Optimisation of a Portfolio's Omega                        |       562 |
+| 1464798 | Constructing 130/30-Portfolios with the Omega Ratio                    |       543 |
+| 1885044 | FX Trading: An Empirical Study                                         |       423 |
+| 1547173 | Optimisation in Financial Engineering                                  |       368 |
+| 2171774 | Better Portfolios with Options                                         |       366 |
+| 1420058 | Optimal Enough?                                                        |       196 |
+| 1681917 | Creating Rank-Correlated Triangular Variates                           |       189 |
+| 1433291 | Robust Regression with Optimisation Heuristics                         |       169 |
+| 1620083 | A Note on ‘Good Starting Values’ in Numerical Optimisation             |       158 |
+| 1886522 | Examples and Extensions for the NMOF Package                           |       154 |
+| 1694442 | Risk-Reward Optimisation for Long-Run Investors: An Empirical Analysis |       128 |
+| 2214376 | Take-the-Best in Portfolio Selection                                   |       107 |
+| 2425313 | Optimization Cultures                                                  |       103 |
+| 2551745 | Heuristics for Portfolio Selection                                     |       102 |
+| 1480183 | Appendix for 'Optimal Enough?'                                         |        49 |
+| 2698114 | Accuracy and Precision in Finance                                      |        33 |
+#+end_example
