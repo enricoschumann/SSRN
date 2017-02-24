@@ -1,0 +1,16 @@
+2017-02-24  Enrico Schumann  <es@enricoschumann.net>
+
+	* DESCRIPTION (Version): Version: 1.0-2
+
+	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+
+2016-11-24  Enrico Schumann  <es@enricoschumann.net>
+
+	* DESCRIPTION (Version): Version: 1.0-1
+
+	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+
+2016-11-22  Enrico Schumann  <es@enricoschumann.net>
+
+	* R/SSRN_stats.R (SSRN_stats): split RE; remove commented code
+
