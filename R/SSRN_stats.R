@@ -10,8 +10,7 @@ SSRN_stats <- function(id, write.file = FALSE,
     txt <- iconv(txt, from = "UTF-8", to = "UTF-8")
 
     txt_ <- paste(txt, collapse = "")
-    pos <- gregexpr("<a class=\"title optClickTitle\" href=\"https://ssrn.com/abstract=",
-                    txt_)
+    pos <- gregexpr("optClickTitle", txt_)
     pos <- c(pos[[1]], nchar(txt_))
 
     papers <- data.frame(Id = numeric(length(pos) - 1),
@@ -19,12 +18,10 @@ SSRN_stats <- function(id, write.file = FALSE,
                          Downloads = character(length(pos) - 1),
                          stringsAsFactors = FALSE)
     for (i in seq_len(length(pos) - 1)) {
-        txt0 <- substr(txt_, pos[i], pos[i+1])
-
-        i_id <- as.numeric(gsub(".*https://ssrn.com/abstract=([0-9]+).*", "\\1", txt0))
-        i_title <- sub(paste0("<a class=\"title optClickTitle\" href=\"https://ssrn.com/abstract=",
-                              ".*?<span>(.*?)</span>.*"), "\\1", txt0)
-        i_dl <- sub(".*<span>Downloads</span>.*?<span>(.*?)</span>.*", "\\1", txt0)
+        p1 <- substr(txt_, pos[i], pos[i+1])
+        i_title <- sub(".*?<span>([^<]+)<.*", "\\1", p1)
+        i_id <- sub(".*?abstract_id=([0-9]+).*", "\\1", p1)
+        i_dl <- sub(".*?Downloads[^0-9]+?([0-9,]+)</span.*", "\\1", p1)
 
         papers[["Id"]][i] <- i_id
         papers[["Title"]][i] <- i_title

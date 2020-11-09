@@ -1,3 +1,9 @@
+2020-11-09  Enrico Schumann  <es@enricoschumann.net>
+
+	* DESCRIPTION (Version): Version: 1.0-3
+
+	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+
 2019-10-23  Enrico Schumann  <es@enricoschumann.net>
 
 	* R/SSRN_stats.R (SSRN_stats): use iconv to remove invalid bytes
