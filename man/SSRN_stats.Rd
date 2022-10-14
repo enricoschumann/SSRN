@@ -23,17 +23,17 @@ SSRN_stats(id, write.file = FALSE, append.file = TRUE,
     integer: the author's Id
   }
   \item{file.prefix}{
-    character    
+    character
   }
   \item{file.timestamp}{
     logical
-  }  
+  }
 }
 \details{
 
   The function reads the whole author page and then looks up the papers
   via regular expressions.
-  
+
 }
 \value{
   A list

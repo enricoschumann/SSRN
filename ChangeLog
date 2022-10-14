@@ -1,26 +1,25 @@
 2020-11-09  Enrico Schumann  <es@enricoschumann.net>
 
-	* DESCRIPTION (Version): Version: 1.0-3
+        * DESCRIPTION (Version): 1.0-3
 
-	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+        * R/SSRN_stats.R (SSRN_stats): fix RE after website change
 
 2019-10-23  Enrico Schumann  <es@enricoschumann.net>
 
-	* R/SSRN_stats.R (SSRN_stats): use iconv to remove invalid bytes
+        * R/SSRN_stats.R (SSRN_stats): use iconv to remove invalid bytes
 
 2017-02-24  Enrico Schumann  <es@enricoschumann.net>
 
-	* DESCRIPTION (Version): Version: 1.0-2
+        * DESCRIPTION (Version): 1.0-2
 
-	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+        * R/SSRN_stats.R (SSRN_stats): fix RE after website change
 
 2016-11-24  Enrico Schumann  <es@enricoschumann.net>
 
-	* DESCRIPTION (Version): Version: 1.0-1
+        * DESCRIPTION (Version): 1.0-1
 
-	* R/SSRN_stats.R (SSRN_stats): fix RE after website change
+        * R/SSRN_stats.R (SSRN_stats): fix RE after website change
 
 2016-11-22  Enrico Schumann  <es@enricoschumann.net>
 
-	* R/SSRN_stats.R (SSRN_stats): split RE; remove commented code
-
+        * R/SSRN_stats.R (SSRN_stats): split RE; remove commented code

@@ -1,0 +1,8 @@
+v1.0-0  (2015-10-26)
+
+  o Initial version. Download author stats from SSRN.
+    There is a public git repository at
+    https://github.com/enricoschumann/SSRN .
+
+    For development details, see
+    http://enricoschumann.net/R/packages/SSRN/ChangeLog .
