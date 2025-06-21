@@ -1,3 +1,9 @@
+2025-06-21  Enrico Schumann  <es@enricoschumann.net>
+
+        * DESCRIPTION (Version): 1.0-4
+
+        * R/SSRN_stats.R (SSRN_stats): use curl::curl instead of url
+
 2020-11-09  Enrico Schumann  <es@enricoschumann.net>
 
         * DESCRIPTION (Version): 1.0-3

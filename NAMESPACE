@@ -1,1 +1,2 @@
 export("SSRN_stats")
+import("curl", "curl")

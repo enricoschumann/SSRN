@@ -3,8 +3,8 @@ SSRN_stats <- function(id, write.file = FALSE,
                        file.prefix = "SSRN",
                        file.timestamp = TRUE) {
 
-    u <- url(paste0("https://papers.ssrn.com/sol3/",
-                    "cf_dev/AbsByAuth.cfm?per_id=", id))
+    u <- curl(paste0("https://papers.ssrn.com/sol3/",
+                     "cf_dev/AbsByAuth.cfm?per_id=", id))
     txt <- readLines(u, warn = FALSE, encoding = "UTF-8")
     close(u)
     txt <- iconv(txt, from = "UTF-8", to = "UTF-8")

@@ -1,11 +1,12 @@
 Package: SSRN
 Type: Package
 Title: Download author stats from SSRN
-Version: 1.0-3
-Date: 2020-11-09
+Version: 1.0-4
+Date: 2025-06-21
 Maintainer: Enrico Schumann <es@enricoschumann.net>
 Authors@R: person("Enrico", "Schumann",
                   role  = c("aut", "cre"),
                   email = "es@enricoschumann.net")
 Description: Download author stats from SSRN.
 License: GPL
+Imports: curl
